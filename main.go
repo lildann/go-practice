@@ -1,15 +1,7 @@
 package main
 
-import "fmt"
-
 func main() {
-	// cards.saveToFile("my_cards")
-	cards := newDeckFromFile("my_cards")
-
-	hand, remainingCards := deal(cards, 5) // multiple return values from one function
-	fmt.Println(hand.toString())
-	remainingCards.print()
-
+	cards := newDeck()
+	cards.shuffle()
+	cards.print()
 }
-
-// Type conversion to byte: fmt.Println([]byte("Hi There!")) -> [72 105 32 84 104 101 114 101 33]
